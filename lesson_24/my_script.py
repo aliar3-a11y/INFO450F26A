@@ -2,8 +2,10 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+from pathlib import path
 
-df=pd.read_csv("Advertising_F.csv")
+BASE_DIR = Path(__file__).resolve().parent
+df = pd.read_csv(BASE_DIR / "Advertising_F.csv")
 st.title("Advertising Effectiveness Ayaan")
 
 st.sidebar.header("Filters")
